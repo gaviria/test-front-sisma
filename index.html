@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Task Manager</title>
+	</head>
+	<body>
+		<h1>Task Manager</h1>
+
+		<!-- Formulario para crear una nueva tarea -->
+		<h2>Nueva Tarea / Editar Tarea</h2>
+		<form id="taskForm">
+			<input type="hidden" id="taskId" name="taskId" />
+			<!-- Campo oculto para el ID de la tarea -->
+
+			<label for="taskName">Tarea:</label>
+			<input type="text" id="taskName" name="taskName" required />
+
+			<label for="completed">Completada:</label>
+			<select id="completed" name="completed">
+				<option value="-">Elegir</option>
+				<option value="1">Si</option>
+				<option value="0">No</option>
+			</select>
+
+			<button type="submit" id="submitButton">Guardar Cambios</button>
+			<!-- Cambio de texto en el botón -->
+		</form>
+
+		<!-- Tabla para mostrar las tareas -->
+		<h2>Tareas</h2>
+		<table id="taskTable" border="1">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Tarea</th>
+					<th>Completada</th>
+					<th>Acciones</th>
+				</tr>
+			</thead>
+			<tbody id="taskTableBody">
+				<!-- Aquí se agregarán las filas de la tabla -->
+			</tbody>
+		</table>
+
+		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+		<script src="script.js"></script>
+	</body>
+</html>
